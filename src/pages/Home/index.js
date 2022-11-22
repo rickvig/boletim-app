@@ -24,7 +24,7 @@ function Home() {
 
   useEffect(() => {
     fetch(
-      `http://localhost:8000/alunos/`,
+      `http://localhost:8000/boletim-nota/`,
       {
         headers: {
           Authorization: "Basic " + btoa(`${username}:${password}`),
@@ -46,11 +46,15 @@ function Home() {
           return (
             <Boletim>
               <a href="">
-                <img src={boletim.img}></img>
+                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055670.png"></img>
               </a>
-              <span>{boletim.nome}</span>
-              <span>{boletim.email}</span>
-              <span>{boletim.data_nascimento}</span>
+              <ul>
+                <li>
+                  <span>{boletim.nota}</span>
+                </li>
+                <li><span>{boletim.disciplina}</span></li>
+                <li><span>{boletim.boletim}</span></li>
+              </ul>
             </Boletim>
           );
         })}
