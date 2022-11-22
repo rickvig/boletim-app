@@ -1,0 +1,12 @@
+* {
+ margin: 0; 
+ padding: 0;
+ box-sizing: border-box;
+ font-family: "Leaue Spartan", sans-serif;
+}
+
+body {
+  background-color: #202124;
+  color: #e8eaed;
+  padding: 2rem;
+}
